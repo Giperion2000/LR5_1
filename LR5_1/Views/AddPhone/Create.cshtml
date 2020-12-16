@@ -1,0 +1,29 @@
+﻿@model LR5_1.Models.Phone
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Новий Телефон</h2>
+@Html.ValidationSummary(false)
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Mark, "Марка")
+    <br />
+    @Html.EditorFor(model => model.Mark)
+    @Html.ValidationMessageFor(model => model.Mark)
+    <br />
+    @Html.LabelFor(model => model.Model, "Модель")
+
+    <br />
+    @Html.EditorFor(model => model.Model)
+    @Html.ValidationMessageFor(model => model.Model)
+    <br />
+    <br />
+    @Html.LabelFor(model => model.Price, "Ціна")
+    <br />
+    @Html.EditorFor(model => model.Price)
+    @Html.ValidationMessageFor(model => model.Price)
+    <br />
+    <br />
+    <input type="submit" value="Добавить" />
+}
+
